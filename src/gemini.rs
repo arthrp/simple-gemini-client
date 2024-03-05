@@ -56,7 +56,7 @@ fn handle_status(header: &str, content: &str) -> () {
 #[should_panic]
 fn should_panic_without_host(){
     let url = &Url::parse("gemini://").unwrap();
-    fetch_data(&url);
+    let _ = fetch_data(&url);
 }
 
 #[test]
